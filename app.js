@@ -17,17 +17,8 @@ app.get("/home",function(req,res){
     console.log("home page visited")
 })
 
+console.log("Umesh here")
 
-app.get("/about",function(req,res){
-    res.send("This is about page")
-})
-
-
-app.post("/hello", (req,res)=>{
-    console.log(req.body)
-
-    res.send("login successful")
-})
 
 
 
