@@ -5,26 +5,11 @@ const app = express();
 app.use(express.json())
 
 connectDb()
+const userRoute = require('./routes/userRoute');
 
-app.get("/",(req, res)=>{
-    res.send("hello world")
-    
-})
+app.use("/api/auth",userRoute)
 
-
-app.get("/home",function(req,res){
-    res.send("This is home page")
-    console.log("home page visited")
-})
-
-console.log("Umesh here")
-
-
-
-
-// app.listen(4000,function(){
-//     console.log("Server is running on port 4000");
-// })
+//localhost:3000/api/user/
 
 app.listen(4000,()=>{
     console.log("Server is running on port 4000");
