@@ -6,8 +6,10 @@ app.use(express.json())
 
 connectDb()
 const userRoute = require('./routes/userRoute');
+const jobRoute = require('./routes/jobRoute');
 
 app.use("/api/auth",userRoute)
+app.use("/api/job",jobRoute)
 
 //localhost:3000/api/user/
 
