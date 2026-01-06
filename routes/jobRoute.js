@@ -4,3 +4,5 @@ const Router = require("express").Router();
 
 
 Router.post("/create", createjob)
+ 
+module.exports = Router;
